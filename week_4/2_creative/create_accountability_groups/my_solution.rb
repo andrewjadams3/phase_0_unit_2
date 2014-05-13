@@ -102,7 +102,7 @@ puts hash_6[1] == [ ]
 This was a challenge that required a bit of thought on my part. Luckily, writing
 out the driver tests before I started to tackle the problem forced me to walk
 through several different error-scenarios in my head before I even began writing
-code. I am beginning to see the real benefits of TDD
+code. I am beginning to see the real benefits of TDD.
 
 I did get stuck at one part of my code. I initially initialized my group_hash as
 Hash.new([ ]), which was not behaving the way I expected. After some research, I
