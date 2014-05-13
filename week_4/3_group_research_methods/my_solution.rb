@@ -6,17 +6,25 @@ my_family_pets_ages = {"Evi" => 6, "Hoobie" => 3, "George" => 12, "Bogart" => 4,
 
 # Person 1's solution
 def my_array_finding_method(source, thing_to_find)
-  # Your code here!
+  source.select! { |i| i.to_s.include?(thing_to_find)}
 end
 
 def my_hash_finding_method(source, thing_to_find)
-  # Your code here!
+  source.select! { |k, v| v == thing_to_find }
+  source.keys
 end
 
 # Identify and describe the ruby method you implemented. 
-# 
 #
+# I discovered the #select method! This method will return an array or hash
+# (depending on what it is called on) containing only the elements for which the
+# block it is passed returns true. I chose to use the destructive version of
+# this method, which modifies the array or hash in place.
 #
+# Another very similar method I discovered was #keep_if. The subtle difference
+# between #select and #keep_if is this: if no changes were made (a true
+# condition was never encountered), #select will return nil, while #keep_if will
+# return the original object.
 
 # Person 2
 def my_array_modification_method(source, thing_to_modify)
@@ -66,7 +74,6 @@ end
 ################## DRIVER CODE ###################################
 # HINT: Use `puts` statements to see if you are altering the original structure with these methods. 
 # Each of these should return `true` if they are implemented properly.
-
 p my_array_finding_method(i_want_pets, "t") == ["want","pets","but"]
 p my_hash_finding_method(my_family_pets_ages, 3) == ["Hoobie", "Ditto"]
 p my_array_modification_method(i_want_pets, 1) == ["I", "want", 4, "pets", "but", "I", "only", "have", 3 ]
@@ -78,8 +85,9 @@ p my_array_deletion_method(i_want_pets, "a") == ["I", 4, "pets", "but", "I", "on
 p my_hash_deletion_method(my_family_pets_ages, "George") == {"Evi" => 8, "Hoobie" => 5, "Bogart" => 6, "Poly" => 6, "Annabelle" => 2, "Ditto" => 5}
 
 # Reflect!
-# 
-# 
-# 
-# 
-# 
+# I'm glad I spent the time to read through both the Array and Hash Ruby docs to
+# discover the #select and #keep_if methods. I learned quite a bit about how 
+# these objects function, and discovered a number of new methods. It was a bit
+# time consuming, but I feel like I have a deeper understanding. Methods like
+# these will save me quite a bit of time in the future. I'm looking forward to 
+# reading about the methods others in my accountability group discover!
