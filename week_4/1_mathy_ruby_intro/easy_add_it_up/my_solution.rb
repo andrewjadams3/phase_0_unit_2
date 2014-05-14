@@ -42,7 +42,7 @@ end
 #SENTENCE MAKER
 def sentence_maker_initial(array)
 	sentence = array.join(" ")
-	sentence = sentence.capitalize.rstrip
+	sentence = sentence.capitalize
 	sentence + "."
 end
 
@@ -50,7 +50,7 @@ end
 
 def total array; array.inject(:+) end
 
-def sentence_maker array; array.join(" ").capitalize.rstrip + "." end
+def sentence_maker array; array.join(" ").capitalize + "." end
 
 
 # 4. Reflection 
@@ -59,3 +59,6 @@ def sentence_maker array; array.join(" ").capitalize.rstrip + "." end
 # how to refactor short methods onto one line. This may not be the most
 # desirable way to approach code (the second method is certainly not very
 # readable), but it was satisfying to come up with a one-liner!
+
+# Edit: After reviewing my code, I realized that there was never a need for 
+# #rstrip. Oh well! It's nice to know about the method in any case.
