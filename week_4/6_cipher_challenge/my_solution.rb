@@ -85,9 +85,7 @@ def north_korean_cipher(coded_message)
       decoded_sentence << x
     end
   end
-  if decoded_sentence.match(/\d+/)
-    decoded_sentence.gsub!(/\d+/) { |num| num.to_i / 100 }
-  end
+  decoded_sentence.gsub!(/\d+/) { |num| num.to_i / 100 }
   decoded_sentence
 end
 
@@ -104,7 +102,7 @@ p north_korean_cipher("ger^wsqifshc*nywx^kix^qi&10000*fekw@sj$gssp%vergl@hsvmxsw
 # This was a great challenge to work on with a partner! There were a lot of 
 # small parts of the code to catch that could easily slip by just one person.
 # I found it very satisfying to come up with a way to automate the cipher. My 
-# partner even had the idea of modifying our method to work for any number of 
+# partner even had the idea of modifying o`ur method to work for any number of 
 # shifts (not just a shift of four letters) which I thought was very clever. I
 # doubt I would have thought to do that on my own.
 
