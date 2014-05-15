@@ -37,4 +37,4 @@ Really focus on breaking each step down. You want to understand every line. **Co
 (Push your solution) to Github, then email your code to your accountability group.
 
 ## Release 6: [Review](https://github.com/Devbootcamp/phase_0_handbook/blob/master/coding_references/review.md) 
-Review the other solutions in your accountability group. Were the solutions different? What did the others do well or better than you? What did you do well? Comment on each solution. Arrange a half hour discussion to discuss your different approaches.  
+Review the other solutions in your accountability group. Were the solutions different? What did the others do well or better than you? What did you do well? Comment on each solution. Arrange a half hour discussion to discuss your different approaches.
