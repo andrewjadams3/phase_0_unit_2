@@ -55,6 +55,10 @@ class Array
 		Array.new(self).pad!(num, padding)
 	end
 
+	def pad_better!(num, padding=nil)
+		self.concat(Array.new(num-size, padding)) if num > size
+		self
+	end
 end
 
 # 4. Reflection
@@ -69,3 +73,7 @@ end
 # becoming more natural. I also found it fairly easy to refactor my initial code
 # down from 8 lines to 2. This is encouraging to me, and I'm glad I am getting 
 # such beneficial practice on problems such as this one.
+
+# Edit: I looked at this problem again and came up with a better #pad! solution. 
+# #pad_better! concatenates a new array with self, and doesn't require a block 
+# to be excecuted.
