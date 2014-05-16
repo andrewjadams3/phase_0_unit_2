@@ -46,7 +46,7 @@ return the array
 # 3. Refactored Solution
 class Array
 
-	def pad!(num, padding=nil)
+	def pad_original!(num, padding=nil)
 		(num-size).times { self << padding } if num > size
 		self
 	end
@@ -55,7 +55,7 @@ class Array
 		Array.new(self).pad!(num, padding)
 	end
 
-	def pad_better!(num, padding=nil)
+	def pad!(num, padding=nil)
 		self.concat(Array.new(num-size, padding)) if num > size
 		self
 	end
@@ -75,5 +75,5 @@ end
 # such beneficial practice on problems such as this one.
 
 # Edit: I looked at this problem again and came up with a better #pad! solution. 
-# #pad_better! concatenates a new array with self, and doesn't require a block 
+# #pad! now concatenates a new array with self, and doesn't require a block 
 # to be excecuted.
