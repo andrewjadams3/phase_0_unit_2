@@ -17,8 +17,7 @@ end
 #
 # I discovered the #select method! This method will return an array or hash
 # (depending on what it is called on) containing only the elements for which the
-# block it is passed returns true. I chose to use the destructive version of
-# this method, which modifies the array or hash in place.
+# block it is passed returns true.
 #
 # Another very similar method I discovered was #keep_if. The subtle difference
 # between #select and #keep_if is this: if no changes were made (a true
