@@ -79,8 +79,8 @@ puts get_col(boggle_board, 3) == ["e", "t", "r", "e"]
 
 # Reflection 
 # This final part required a little more thought, but was still fairly simple to
-# accomplish. In order to simple and quickly find each column element, it was 
-# easier to map a range equaling the length of the board. This will iterate over
-# each index. Then from there, I only had to return the subindex which
+# accomplish. In order to simply and quickly find each column element, it was 
+# easier to map a range equalling the length of the board. This will iterate
+# over each index. Then from there, I only had to return the subindex which
 # corresponded to the column. I didn't necessarily learn anything new, but
 # thinking in terms of nested arrays is always a beneficial thought exercise.
