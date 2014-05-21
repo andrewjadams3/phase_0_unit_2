@@ -74,16 +74,18 @@ class CreditCard
 		@card_number = card_number
 	end
 
-	def int_split(string)
-		string.split('').map(&:to_i)
-	end
-
 	def check_card
 		nums = int_split(@card_number.to_s)
 		doubled = (0...16).map {|i| i.even? ? nums[i]*2 : nums[i]}
 		answer = int_split(doubled.join)
 		answer.inject(:+) % 10 == 0
 	end
+
+	private
+	
+		def int_split(string)
+			string.split('').map(&:to_i)
+		end
 
 end
 
