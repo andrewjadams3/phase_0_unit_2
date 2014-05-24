@@ -5,7 +5,6 @@
 # 2) Justin Lee
 
 # This is the file you should end up editing. 
-
 def bakery_num(num_of_people, fav_food) # Define method bakery_num that inputs number of people (int), and fav food (string)
   my_list = {"pie" => 8, "cake" => 6, "cookie" => 1} # My list initializes new hash. Keys: pie, cake, cookie. Values: 8, 6, 1
   pie_qty = 0 # Qty of each fav food to 0

@@ -68,6 +68,15 @@ puts bakery_num(9001, "cookie") == "You need to make 0 pie(s), 0 cake(s), and 90
 puts bakery_num(71, "pie") == "You need to make 8 pie(s), 1 cake(s), and 1 cookie(s)."
 
 # Reflection 
+# This was a fun challenge to pair on. We both gained a lot of practice deciding
+# what was necessary and what could be removed/changed/refactored. I know there
+# was quite a bit that we missed, and there may have been a better approach to 
+# solving the problem altogether, but I'm satisfied with our new method.
 
+# We broke the rules slightly in order to create a method which takes into
+# account a customer's favorite food, and ensure that they get it no matter
+# what. For example, even if only one person wants pie, they can order an entire
+# pie for themselves. This required us to redo the drive code a bit, but it was
+# fun to create our own solution.
 
 
