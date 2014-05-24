@@ -10,12 +10,12 @@
 # Steps:
 
 # WHILE a.length > 1
-# 	ITERATE through a
-# 		IF character == +
-# 			POP last three, set to variable b
-# 			PUSH sum of first two characters of b to a
-# 			BREAK
-# 		REPEAT for - and *
+#   ITERATE through a
+#       IF character == +
+#           POP last three, set to variable b
+#           PUSH sum of first two characters of b to a
+#           BREAK
+#       REPEAT for - and *
 # RETURN a
 
 # 3. Initial Solution
@@ -23,26 +23,26 @@
 # class RPNCalculator
   
 #   def evaluate(eq)
-#   	a = eq.split(' ') #new array of each number and symbol
-#   	while a.length > 1 #while the array has more than one character
-#   		(0...a.length).each do |i| #iterate through the array's indices
-#   			if a[i] == "+" #if the symbol at this index is a +
-#   				b = a.slice!(i-2, 3) #remove the previous symbols, assign them to b
-#   				a.insert(i-2, b[0].to_i + b[1].to_i) #add the numbers, push them back
+#       a = eq.split(' ') #new array of each number and symbol
+#       while a.length > 1 #while the array has more than one character
+#           (0...a.length).each do |i| #iterate through the array's indices
+#               if a[i] == "+" #if the symbol at this index is a +
+#                   b = a.slice!(i-2, 3) #remove the previous symbols, assign them to b
+#                   a.insert(i-2, b[0].to_i + b[1].to_i) #add the numbers, push them back
 #                                         #into the array in the correct location
-#   				break #leave the loop
-#   			elsif a[i] == "-" #same thing for -
-#   				b = a.slice!(i-2, 3)
-#   				a.insert(i-2, b[0].to_i - b[1].to_i)
-#   				break
-#   			elsif a[i] == "*" #same thing for *
-#   				b = a.slice!(i-2, 3)
-#   				a.insert(i-2, b[0].to_i * b[1].to_i)
-#   				break
-#   			end
-#   		end
-#   	end
-#   	a[0].to_i #return the answer
+#                   break #leave the loop
+#               elsif a[i] == "-" #same thing for -
+#                   b = a.slice!(i-2, 3)
+#                   a.insert(i-2, b[0].to_i - b[1].to_i)
+#                   break
+#               elsif a[i] == "*" #same thing for *
+#                   b = a.slice!(i-2, 3)
+#                   a.insert(i-2, b[0].to_i * b[1].to_i)
+#                   break
+#               end
+#           end
+#       end
+#       a[0].to_i #return the answer
 #   end
 # end
 
@@ -52,17 +52,17 @@
 class RPNCalculator
   
   def evaluate(eq)
-  	a = eq.split(' ')
-  	while a.length > 1
-  		(0...a.length).each do |i|
-  			if ["+", "-", "*"].include?(a[i])
-  				b = a.slice!(i-2, 3)
-  				a.insert(i-2, b[0].to_i.send(b[2], b[1].to_i))
-  				break
-  			end
-  		end
-  	end
-  	a[0].to_i
+    a = eq.split(' ')
+    while a.length > 1
+        (0...a.length).each do |i|
+            if ["+", "-", "*"].include?(a[i])
+                b = a.slice!(i-2, 3)
+                a.insert(i-2, b[0].to_i.send(b[2], b[1].to_i))
+                break
+            end
+        end
+    end
+    a[0].to_i
   end
 
 end

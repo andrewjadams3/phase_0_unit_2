@@ -31,8 +31,7 @@ puts create_word(boggle_board, [0,0], [1,1], [1,1], [3,0]) == "boot"
 
 #-------------------------------------------------------------------------------
 
-# Part 2: Write a method that takes a row number and returns all the elements in
-# the row.  
+# Part 2: Write a method that takes a row number and returns all the elements in the row.  
 
 # Pseudocode
 # Define get_row, takes an board and one number as an argument
@@ -55,6 +54,7 @@ puts get_row(boggle_board, 3) == ["t", "a", "k", "e"]
 # only had to return the array which resided at the index passed to the method.
 
 
+<<<<<<< HEAD
 #-------------------------------------------------------------------------------
 
 # Part 3: Now write a method that takes a column number and returns all the
@@ -84,3 +84,5 @@ puts get_col(boggle_board, 3) == ["e", "t", "r", "e"]
 # over each index. Then from there, I only had to return the subindex which
 # corresponded to the column. I didn't necessarily learn anything new, but
 # thinking in terms of nested arrays is always a beneficial thought exercise.
+=======
+>>>>>>> upstream/master
