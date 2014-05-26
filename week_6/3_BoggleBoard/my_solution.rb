@@ -37,15 +37,15 @@
 # 3. Initial Solution
 class BoggleBoard
  
-  def initialize(board)
-  	@board = board
-  end
+	def initialize(board)
+		@board = board
+	end
 
-  def create_word(*coords)
-  	coords.map { |coord| @board[coord.first][coord.last]}.join("")
-  end
+	def create_word(*coords)
+		coords.map { |coord| @board[coord.first][coord.last]}.join("")
+	end
 
-  def get_row(num)
+	def get_row(num)
 		@board[num]
 	end
 
