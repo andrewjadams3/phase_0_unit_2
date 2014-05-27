@@ -71,7 +71,7 @@ class PezDispenser
 end
 
 # 4. Refactored Solution
-
+# No refactoring necessary, code is already succinct.
 
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
